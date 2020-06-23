@@ -29,12 +29,21 @@ p {
     text-decoration: none;
 }
 
-
-
-
-
 a:hover {
     text-decoration: underline;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: max-content;
 }
 
 #search-bar {
@@ -45,6 +54,11 @@ a:hover {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
+.form {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
 .bottom {
     color: rgba(0,0,0,.54);
     background-color: #f2f2f2;
