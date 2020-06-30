@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: 0;
 }
 
 html, body {
@@ -10,11 +9,15 @@ html, body {
 }
 
 #container {
-    min-height: 100%;
+    height: 100%;
+    
 }
 
 #main {
+    height: 100%;
+    box-sizing: border-box;
     overflow: hidden;
+    padding-bottom: 40px;
 }
 
 #top-nav {
@@ -58,29 +61,56 @@ html, body {
     box-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
 
-.main {
+.content {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: auto;
     justify-content: center;
     align-items: center;
 }
 
-img {
+#google-logo {
     max-width: max-content;
-    margin: 100px 0px 30px 5px;
+    margin: 150px 0px 30px 0px;
+}
+
+#search {
+    position: relative;
+    display: flex;
+    min-width: 200px;
 }
 
 #search-bar {
-    height: 40px;
-    width: 500px;
-    outline: 0;
-    border: 1px;
-    border-radius: 20px;
-    border-width: 100%;
-    border-color: rgba(0, 0, 0, 0.13);
+    height: 46px;
+    width: 484px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 30px;
     margin-bottom: 20px;
+    outline: 0;
+    padding-bottom: 2px;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 17px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+#search-icon {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 13px;
+}
+
+#voice-icon {
+    position: absolute;
+    top: 13px;
+    right: 18px;
+    width: 13px;
 }
 
 #search-bar:hover {
@@ -92,19 +122,41 @@ img {
     border-color: rgba(0, 0, 0, 0.13);
 }
 
-.form {
+#buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 10px;
+}
+
+#search-button {
+    margin-right: 10px;
+}
+
+button {
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #5F6368;
+    padding: 0 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #222;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
 #footer {
     position: relative;
     height: 40px;
-    margin-top: -42px;
-    overflow: hidden;
+    margin-top: -41px;
     background-color: #f2f2f2;
     border-top: 1px solid #e7e7e7;
+    clear: both;
 }
 
 #bottom-nav {
